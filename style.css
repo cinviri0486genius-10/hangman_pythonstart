@@ -1,0 +1,128 @@
+:root {
+    --bg-color: #090d16;
+    --card-color: #111827;
+    --primary-color: #38bdf8;
+    --secondary-color: #a855f7;
+    --success-color: #10b981;
+    --danger-color: #f43f5e;
+    --text-color: #f3f4f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: var(--card-color);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid #1f2937;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.score-box { color: var(--success-color); }
+.lives-box { color: var(--danger-color); }
+
+.hangman-graphic {
+    background-color: #030712;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 1.1rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1f2937;
+    color: #9ca3af;
+}
+
+.word-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 12px;
+    margin: 25px 0 10px 0;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.hint-box {
+    color: #94a3b8;
+    font-style: italic;
+    margin-bottom: 25px;
+    min-height: 45px;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.key {
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.1s;
+}
+
+.key:hover:not(:disabled) {
+    background-color: var(--primary-color);
+}
+
+.key:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    height: 30px;
+}
+
+.restart-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}

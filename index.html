@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Hangman Challenge 🐍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container" id="game-card">
+        <h1>Python Hangman 🎮</h1>
+        
+        <div class="stats">
+            <div class="score-box">Racha: <span id="streak">0</span>/10 🔥</div>
+            <div class="lives-box">Vidas: <span id="lives">6</span> ❤️</div>
+        </div>
+
+        <!-- Dibujo del ahorcado con texto -->
+        <div class="hangman-graphic" id="hangman-visual">👁️‍🗨️ ¡Listo para iniciar el hack!</div>
+
+        <!-- Espacios de la palabra secreta -->
+        <div class="word-display" id="word-target">_ _ _ _</div>
+        
+        <div class="hint-box" id="hint-target">Pista...</div>
+
+        <!-- Teclado en pantalla para jugar haciendo clic -->
+        <div class="keyboard" id="keyboard-container"></div>
+
+        <div class="message" id="message-target"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
